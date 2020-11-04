@@ -1,6 +1,6 @@
 # TerminalApi
 
-All URIs are relative to *http://localhost:13083*
+All URIs are relative to *https://localhost:13083*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,9 +11,7 @@ Method | HTTP request | Description
 
 ## CardPayment
 
-> CardPaymentResponse do_post(card_payment_request)
-
-Start a card payment. Usually, only one terminal operation can be running at once
+Start a card payment. Only one terminal operation can be running at once
 
 ### Example
 
@@ -32,21 +30,13 @@ curl --location --request POST 'http://{{base_url}}:13083/api/terminal/pay' \
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **card_payment_request** | [**CardPaymentRequest**](TerminalApi.md#CardPaymentRequest)| Card payment request | 
-
-## CardPaymentRequest
-
-### Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **external_id** | **String** | id from external software | [optional] 
 **request_contents** | [**PaxPaymentRequest**](TerminalApi.md#PaxPaymentRequest) |  | [optional] 
 **print_receipt** | **Boolean** | set if the terminal should print a receipt immediately. Receipt data us sent back in the response regardless of this setting | [optional] 
 
-## PaxPaymentRequest
+### PaxPaymentRequest
 
 ### Properties
 
@@ -58,8 +48,6 @@ Name | Type | Description | Notes
 
 ### Return type
 
-## CardPaymentResponse
-
 ### Properties
 
 Name | Type | Description | Notes
@@ -69,7 +57,7 @@ Name | Type | Description | Notes
 **message** | [**PaxPaymentResponse**](TerminalApi.md#PaxPaymentResponse) |  | [optional] 
 **error_message** | **String** |  | [optional] 
 
-## PaxPaymentResponse
+### PaxPaymentResponse
 
 ### Properties
 
@@ -99,8 +87,6 @@ No authorization required
 
 ## Totals
 
-> PaymentTotalsResponse do_post5(payment_totals_request)
-
 Terminal totals report
 
 Payment terminal generates a totals/subtotals report
@@ -118,14 +104,6 @@ curl --location --request POST 'http://localhost:13083/api/terminal/totals' \
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **payment_totals_request** | [**PaymentTotalsRequest**](TerminalApi.md#PaymentTotalsRequest)| Payment totals request | 
- 
-## PaymentTotalsRequest
-
-### Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **print_receipt** | **Boolean** | set if the terminal should print a receipt immediately. Receipt data us sent back in the response regardless of this setting | [optional] 
@@ -133,8 +111,6 @@ Name | Type | Description | Notes
 **sub_totals** | **Boolean** |  | [optional] 
 
 ### Return type
-
-## PaymentTotalsResponse
 
 ### Properties
 
