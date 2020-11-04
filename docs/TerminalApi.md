@@ -8,7 +8,6 @@ Method | HTTP request | Description
 [**Totals**](TerminalApi.md#Totals) | **POST** /api/terminal/totals | Terminal totals report
 
 
-
 # CardPayment
 
 Start a card payment. Only one terminal operation can be running at once
@@ -28,7 +27,12 @@ curl --location --request POST 'http://{{base_url}}:13083/api/terminal/pay' \
 }'
 ```
 
-### Parameters
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### Request Parameters
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -44,7 +48,7 @@ Name | Type | Description | Notes
 **amount** | **String** | Amount, as a string, with a . as a decimal separator | [optional] 
 **transaction_id** | **String** | ID of the transaction, for the terminal | [optional] 
 
-### Return type
+### Response Parameters
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -68,12 +72,6 @@ Name | Type | Description | Notes
 **customer_receipt** | **String** | Customer receipt (formatted text) | [optional] 
 **merchant_receipt** | **String** | Merchant receipt (formatted text) | [optional] 
 
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
 ## Totals
 
 Terminal totals report
@@ -91,7 +89,12 @@ curl --location --request POST 'http://localhost:13083/api/terminal/totals' \
 }'
 ```
 
-### Parameters
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### Request Parameters
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -99,7 +102,7 @@ Name | Type | Description | Notes
 **transaction_id** | **String** |  | [optional] 
 **sub_totals** | **Boolean** |  | [optional] 
 
-### Return type
+### Response Parameters
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -108,19 +111,23 @@ Name | Type | Description | Notes
 **message** | [**PaxTotalsResponse**](TerminalApi.md#PaxTotalsResponse) |  | [optional] 
 **error_message** | **String** |  | [optional] 
 
-### PaxTotalsResponse
+#### PaxTotalsResponse
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **result** | **String** | Operation result. \&quot;0\&quot; for success, anything else for failure | [optional] 
 **resp_message** | **String** | Additional text information. | [optional] 
-**host_counters** | [**Array&lt;PaxTotalsResponseCounter&gt;**](PaxTotalsResponseCounter.md) |  | [optional] 
-**terminal_counters** | [**Array&lt;PaxTotalsResponseCounter&gt;**](PaxTotalsResponseCounter.md) |  | [optional] 
+**host_counters** | [**Array&lt;PaxTotalsResponseCounter&gt;**](TerminalApi.md#PaxTotalsResponseCounter) |  | [optional] 
+**terminal_counters** | [**Array&lt;PaxTotalsResponseCounter&gt;**](TerminalApi.md#PaxTotalsResponseCounter) |  | [optional] 
 **customer_receipt** | **String** | Customer receipt (formatted text) | [optional] 
 **merchant_receipt** | **String** | Merchant receipt (formatted text) | [optional] 
 
-### HTTP request headers
+#### PaxTotalsResponseCounter
 
-- **Content-Type**: application/json
-- **Accept**: application/json
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**record_id** | **String** | Name of the record | [optional] 
+**debit_count** | **String** | Number of debit card transactions | [optional] 
+**debit_amount** | **String** | Total value of debit card transactions | [optional] 
+**credit_count** | **String** | Number of credit card transactions | [optional] 
+**credit_amount** | **String** | Total value of credit card transactions | [optional] 
