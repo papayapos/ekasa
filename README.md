@@ -16,7 +16,7 @@ Service | HTTP request | Description
 [**Get Merchant**](docs/MerchantApi.md#do_post3) | **POST** /api/merchant/get | Get actual merchant
 [**Store Merchant**](docs/MerchantApi.md#do_post8) | **POST** /api/merchant/store | Store new merchant to Chdu
 [**Print**](docs/OtherApi.md#do_post9) | **POST** /api/print | Print custom string
-[**Payment**](docs/TerminalApi.md#Payment) | **POST** /api/terminal/pay | Card payment
+[**Payment**](docs/TerminalApi.md#CardPayment) | **POST** /api/terminal/pay | Card payment
 [**Terminal Totals**](docs/TerminalApi.md#Totals) | **POST** /api/terminal/totals | Terminal totals report
 
 
