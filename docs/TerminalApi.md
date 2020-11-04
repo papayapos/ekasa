@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 
-## CardPayment
+# CardPayment
 
 Start a card payment. Only one terminal operation can be running at once
 
@@ -36,9 +36,7 @@ Name | Type | Description | Notes
 **request_contents** | [**PaxPaymentRequest**](TerminalApi.md#PaxPaymentRequest) |  | [optional] 
 **print_receipt** | **Boolean** | set if the terminal should print a receipt immediately. Receipt data us sent back in the response regardless of this setting | [optional] 
 
-### PaxPaymentRequest
-
-### Properties
+#### PaxPaymentRequest
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -48,8 +46,6 @@ Name | Type | Description | Notes
 
 ### Return type
 
-### Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **warning** | **String** | Filled only if any warning | [optional] 
@@ -57,9 +53,7 @@ Name | Type | Description | Notes
 **message** | [**PaxPaymentResponse**](TerminalApi.md#PaxPaymentResponse) |  | [optional] 
 **error_message** | **String** |  | [optional] 
 
-### PaxPaymentResponse
-
-### Properties
+#### PaxPaymentResponse
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -73,11 +67,6 @@ Name | Type | Description | Notes
 **signature** | **String** | Information , whether Signature checking is required (Values: Y/N) | [optional] 
 **customer_receipt** | **String** | Customer receipt (formatted text) | [optional] 
 **merchant_receipt** | **String** | Merchant receipt (formatted text) | [optional] 
-
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -112,8 +101,6 @@ Name | Type | Description | Notes
 
 ### Return type
 
-### Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **warning** | **String** | Filled only if any warning | [optional] 
@@ -123,8 +110,6 @@ Name | Type | Description | Notes
 
 ### PaxTotalsResponse
 
-### Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **result** | **String** | Operation result. \&quot;0\&quot; for success, anything else for failure | [optional] 
@@ -133,10 +118,6 @@ Name | Type | Description | Notes
 **terminal_counters** | [**Array&lt;PaxTotalsResponseCounter&gt;**](PaxTotalsResponseCounter.md) |  | [optional] 
 **customer_receipt** | **String** | Customer receipt (formatted text) | [optional] 
 **merchant_receipt** | **String** | Merchant receipt (formatted text) | [optional] 
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
