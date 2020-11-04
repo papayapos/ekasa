@@ -32,6 +32,20 @@ curl --location --request POST 'http://{{base_url}}:13083/api/terminal/pay' \
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+### Example Request Body
+
+```yaml
+{
+    "externalId": "28f3af59-52af-42a6-a217-fc26278482db",
+    "requestContents": {
+        "operation": "CP",
+        "amount": "1.5",
+        "TransactionId": "28f3af59-52af-42a6-a217-fc26278482db"
+    },
+    "printReceipt": false
+}
+```
+
 ### Request Parameters
 
 Name | Type | Description | Notes
@@ -47,6 +61,28 @@ Name | Type | Description | Notes
 **operation** | **String** | Operation identifier. CP for payment, CC for cancel, CR for refund | [optional] 
 **amount** | **String** | Amount, as a string, with a . as a decimal separator | [optional] 
 **transaction_id** | **String** | ID of the transaction, for the terminal | [optional] 
+
+### Example Response Body
+
+```yaml
+{
+  "warning": "Warning, you should solve this, but eKasa works",
+  "success": true,
+  "message": {
+    "Result": "0",
+    "RespMessage": "Ok",
+    "AuthCode": "581281",
+    "CardBrand": "Visa Prepaid",
+    "BIN": "479608",
+    "HostRC": "proident qui",
+    "PINindicator": "N",
+    "Signature": "N",
+    "CustomerReceipt": "Customer receipt (formatted text)",
+    "MerchantReceipt": "Merchant receipt (formatted text)"
+  },
+  "errorMessage": "Only if error occured"
+}
+```
 
 ### Response Parameters
 
@@ -94,6 +130,16 @@ curl --location --request POST 'http://localhost:13083/api/terminal/totals' \
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+### Example Request Body
+
+```yaml
+{
+    "printReceipt": true,
+    "transactionId": "urn:uuid:bb78531a-f2f7-c27f-9523-819b1d280a4b",
+    "subTotals": false
+}
+```
+
 ### Request Parameters
 
 Name | Type | Description | Notes
@@ -101,6 +147,54 @@ Name | Type | Description | Notes
 **print_receipt** | **Boolean** | set if the terminal should print a receipt immediately. Receipt data us sent back in the response regardless of this setting | [optional] 
 **transaction_id** | **String** |  | [optional] 
 **sub_totals** | **Boolean** |  | [optional] 
+
+### Example Response Body
+
+```yaml
+{
+  "warning": "Warning, you should solve this, but eKasa works",
+  "success": false,
+  "message": {
+    "Result": "0",
+    "RespMessage": "incididunt ad",
+    "HostCounters": [
+      {
+        "RecordId": "VISA",
+        "DebitCount": "1",
+        "DebitAmount": "1.5",
+        "CreditCount": "3",
+        "CreditAmount": "25.35"
+      },
+      {
+        "RecordId": "VISA",
+        "DebitCount": "1",
+        "DebitAmount": "1.5",
+        "CreditCount": "3",
+        "CreditAmount": "25.35"
+      }
+    ],
+    "TerminalCounters": [
+      {
+        "RecordId": "VISA",
+        "DebitCount": "1",
+        "DebitAmount": "1.5",
+        "CreditCount": "3",
+        "CreditAmount": "25.35"
+      },
+      {
+        "RecordId": "VISA",
+        "DebitCount": "1",
+        "DebitAmount": "1.5",
+        "CreditCount": "3",
+        "CreditAmount": "25.35"
+      }
+    ],
+    "CustomerReceipt": "nisi in dolor",
+    "MerchantReceipt": "deserunt laborum laboris Duis"
+  },
+  "errorMessage": "ullamco deserunt eiusmod mollit"
+}
+```
 
 ### Response Parameters
 
