@@ -4,20 +4,20 @@
 
 All URIs are relative to *https://localhost:13083*
 
-Class | Method | HTTP request | Description
------------- | ------------- | ------------- | -------------
-*OpenapiClient::CashApi* | [**do_post1**](docs/CashApi.md#do_post1) | **POST** /api/cash | Cash deposit/withdraw
-*OpenapiClient::DocumentApi* | [**do_post10**](docs/DocumentApi.md#do_post10) | **POST** /api/document/update | Update broken document
-*OpenapiClient::DocumentApi* | [**do_post2**](docs/DocumentApi.md#do_post2) | **POST** /api/document/get | Get document
-*OpenapiClient::DocumentApi* | [**do_post4**](docs/DocumentApi.md#do_post4) | **POST** /api/document/get/offline | Get offline documents
-*OpenapiClient::DocumentApi* | [**do_post6**](docs/DocumentApi.md#do_post6) | **POST** /api/document/send/offline | Send offline requests
-*OpenapiClient::DocumentApi* | [**do_post7**](docs/DocumentApi.md#do_post7) | **POST** /api/document/store | Store document
-*OpenapiClient::LocationApi* | [**do_post11**](docs/LocationApi.md#do_post11) | **POST** /api/location/update | Update location
-*OpenapiClient::MerchantApi* | [**do_post3**](docs/MerchantApi.md#do_post3) | **POST** /api/merchant/get | Get merchant
-*OpenapiClient::MerchantApi* | [**do_post8**](docs/MerchantApi.md#do_post8) | **POST** /api/merchant/store | Store merchant
-*OpenapiClient::OtherApi* | [**do_post9**](docs/OtherApi.md#do_post9) | **POST** /api/print | Print string
-*OpenapiClient::TerminalApi* | [**do_post**](docs/TerminalApi.md#do_post) | **POST** /api/terminal/pay | Card payment
-*OpenapiClient::TerminalApi* | [**do_post5**](docs/TerminalApi.md#do_post5) | **POST** /api/terminal/totals | Terminal totals report
+Service | HTTP request | Description
+------------- | ------------- | -------------
+[**Cash**](docs/CashApi.md#do_post1) | **POST** /api/cash | Cash deposit/withdraw
+[**Fix document**](docs/DocumentApi.md#do_post10) | **POST** /api/document/update | Update broken document
+[**New Document**](docs/DocumentApi.md#do_post7) | **POST** /api/document/store | Store document
+[**Get Document**](docs/DocumentApi.md#do_post2) | **POST** /api/document/get | Get last document
+[**Get offline**](docs/DocumentApi.md#do_post4) | **POST** /api/document/get/offline | Get offline requests (documents,locations)
+[**Send offline**](docs/DocumentApi.md#do_post6) | **POST** /api/document/send/offline | Send offline requests (documents,locations)
+[**Update Location**](docs/LocationApi.md#do_post11) | **POST** /api/location/update | Update location
+[**Get Merchant**](docs/MerchantApi.md#do_post3) | **POST** /api/merchant/get | Get actual merchant
+[**Store Merchant**](docs/MerchantApi.md#do_post8) | **POST** /api/merchant/store | Store new merchant to Chdu
+[**Print**](docs/OtherApi.md#do_post9) | **POST** /api/print | Print custom string
+[**Payment**](docs/TerminalApi.md#Payment) | **POST** /api/terminal/pay | Card payment
+[**Terminal Totals**](docs/TerminalApi.md#Totals) | **POST** /api/terminal/totals | Terminal totals report
 
 
 ## Documentation for Models
