@@ -121,9 +121,9 @@ Name | Type | Description | Notes
 **message** | [**PaxTotalsResponse**](TerminalApi.md#PaxTotalsResponse) |  | [optional] 
 **error_message** | **String** |  | [optional] 
 
-## PaxTotalsResponse
+### PaxTotalsResponse
 
-## Properties
+### Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
