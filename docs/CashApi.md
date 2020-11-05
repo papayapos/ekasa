@@ -4,9 +4,9 @@ All URIs are relative to *https://localhost:13083*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Cash**](CashApi.md#Cash) | **POST** /api/cash | Cash deposit/withdraw
+[**Cash**](CashApi.md#CashRequest) | **POST** /api/cash | Cash deposit/withdraw
 
-## Cash
+## CashRequest
 > Cash deposit/withdraw
 
 Create cash deposit or withdraw
