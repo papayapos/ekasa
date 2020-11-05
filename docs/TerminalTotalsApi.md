@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 ## Totals
 
-Terminal totals report
+> Terminal totals report
 
 Payment terminal generates a totals/subtotals report
 
