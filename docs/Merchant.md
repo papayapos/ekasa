@@ -14,22 +14,3 @@ Name | Type | Description | Notes
 **physical_address** | [**PhysicalAddress**](PhysicalAddress.md) |  | [optional] 
 **organization_unit** | [**OrganizationUnit**](OrganizationUnit.md) |  | [optional] 
 **security_data** | [**MerchantSecurityData**](MerchantSecurityData.md) |  | [optional] 
-
-## Code Sample
-
-```ruby
-require 'OpenapiClient'
-
-instance = OpenapiClient::Merchant.new(status: null,
-                                 printer_status: NORMAL,
-                                 id: null,
-                                 corporate_full_name: TEST,
-                                 ico: 99999999,
-                                 dic: 1234567890,
-                                 ic_dph: SK1234567890,
-                                 physical_address: null,
-                                 organization_unit: null,
-                                 security_data: null)
-```
-
-
