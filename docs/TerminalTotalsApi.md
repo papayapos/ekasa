@@ -18,9 +18,9 @@ Payment terminal generates a totals/subtotals report
 ```bash
 curl --location --request POST 'http://localhost:13083/api/terminal/totals' \
 --data-raw '{
-    "printReceipt": true,
-    "transactionId": "urn:uuid:bb78531a-f2f7-c27f-9523-819b1d280a4b",
-    "subTotals": false
+  "printReceipt": true,
+  "transactionId": "urn:uuid:bb78531a-f2f7-c27f-9523-819b1d280a4b",
+  "subTotals": false
 }'
 ```
 
