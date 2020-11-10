@@ -1,6 +1,4 @@
-# OpenapiClient::VatRateSum
-
-## Properties
+# VatRateSum
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -8,16 +6,3 @@ Name | Type | Description | Notes
 **base** | **Float** | Base sum for vat | [optional] 
 **vat** | **Float** | Issued vat | [optional] 
 **sum** | **Float** | Total sum with vat | [optional] 
-
-## Code Sample
-
-```ruby
-require 'OpenapiClient'
-
-instance = OpenapiClient::VatRateSum.new(title: VAT_20,
-                                 base: null,
-                                 vat: null,
-                                 sum: null)
-```
-
-
