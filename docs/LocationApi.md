@@ -1,6 +1,6 @@
 # LocationApi
 
-All URIs are relative to *http://localhost:13083*
+All URIs are relative to *https://localhost:13083*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
