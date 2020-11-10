@@ -5,6 +5,7 @@ All URIs are relative to *https://localhost:13083*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**Update location**](LocationApiUpdate.md#UpdateLocation) | **POST** /api/location/update | Update location
+[**Fix location**](LocationApiFix.md#FixLocation) | **POST** /api/location/update | Fix location
 
 ## Update Location
 
@@ -15,7 +16,7 @@ Update cash register location
 ### Example
 
 ```bash
-curl --location --request POST 'http://192.168.0.101:13083/api/location/update' \
+curl --location --request POST 'https://localhost:13083/api/location/update' \
 --data-raw '{
   "gps": {
 		"x": "17.165377",
@@ -35,8 +36,8 @@ curl --location --request POST 'http://192.168.0.101:13083/api/location/update' 
 ```yaml
 {
   "gps": {
-		"x": "17.165377",
-		"y": "48.148962"
+    "x": "17.165377",
+    "y": "48.148962"
 	}
 }
 ```
@@ -50,12 +51,12 @@ curl --location --request POST 'http://192.168.0.101:13083/api/location/update' 
 ```yaml
 {
   "physicalAddress": {
-		"country": "Slovenská Republika",
-		"municipality": "Bratislava",
-		"street": "Prievozská",
-		"buildingNumber" : "74",
-		"postalCode": "82101"
-	}
+    "country": "Slovenská Republika",
+    "municipality": "Bratislava",
+    "street": "Prievozská",
+    "buildingNumber" : "74",
+    "postalCode": "82101"
+  }
 }
 ```
 
@@ -65,10 +66,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | [optional] 
 **create_date** | **DateTime** |  | [optional] 
-**physical_address** | [**PhysicalAddress**](PhysicalAddress.md) |  | [optional] 
-**gps** | [**Gps**](Gps.md) |  | [optional] 
+**physical_address** | [**PhysicalAddress**](LocationApiUpdate.md#PhysicalAddress) |  | [optional] 
+**gps** | [**Gps**](LocationApiUpdate.md#Gps) |  | [optional] 
 **other_location** | **String** | Other location | [optional] 
-**fix_location** | [**FixLocation**](FixLocation.md) |  | [optional] 
 
 ### Example Response
 
@@ -124,7 +124,7 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **warning** | **String** | Filled only if any warning | [optional] 
-**location** | [**Location**](LocationApi.md#Location) |  | [optional] 
+**location** | [**Location**](LocationApiUpdate.md#Location) |  | [optional] 
 **error_message** | **String** |  | [optional] 
 
 ### Location
@@ -134,12 +134,29 @@ Name | Type | Description | Notes
 **status** | [**EkasaStatus**](EkasaStatus.md) |  | [optional] 
 **printer_status** | **String** | Printer status | [optional] 
 **internal_id** | **Integer** |  | [optional] 
-**physical_address** | [**PhysicalAddress**](PhysicalAddress.md) |  | [optional] 
-**gps** | [**Gps**](Gps.md) |  | [optional] 
+**physical_address** | [**PhysicalAddress**](LocationApiFix.md#PhysicalAddress) |  | [optional] 
+**gps** | [**Gps**](LocationApiFix.md#Gps) |  | [optional] 
 **other** | **String** |  | [optional] 
 **create_date** | **DateTime** |  | [optional] 
 **process_date** | **DateTime** |  | [optional] 
 **cash_register_code** | **String** |  | [optional] 
-**merchant** | [**Merchant**](Merchant.md) |  | [optional] 
+**merchant** | [**Merchant**](MerchantApiGet.md#Merchant) |  | [optional] 
 **sending_count** | **Integer** |  | [optional] 
 
+### GPS
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**x** | **Float** | GPS X coordinate of the venue | [optional] 
+**y** | **Float** | GPS Y coordinate of the venue | [optional] 
+
+### PhysicalAddress
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**country** | **String** | Country. e.g. Slovenská Republika | [optional] 
+**municipality** | **String** | Municipality, its name of town, e.g. Karlova ves | [mandatory] 
+**street** | **String** | Name of the street, e.g. Čaklovská | [mandatory] 
+**building_number** | **String** | orientačné číslo | [optional] 
+**property_registration_number** | **String** | číslo budovy | [optional] 
+**postal_code** | **String** | Postal code | [mandatory] 
