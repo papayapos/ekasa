@@ -4,7 +4,7 @@ All URIs are relative to *https://localhost:13083*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Print**](CustomPrintApi.md#Print) | **POST** /api/print | Print string
+[**Print**](CustomPrintApi.md#Print) | **POST** /api/print | Print custom string
 
 ## Print
 
