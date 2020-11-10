@@ -1,4 +1,4 @@
-# OpenapiClient::Document
+# Document
 
 ## Properties
 
@@ -33,41 +33,3 @@ Name | Type | Description | Notes
 **electronic_receipt** | **String** | Electronic receipt as bitmap in BASE64 encoding or Esc Pos sequence receipt | [optional] 
 **header_image** | **Array&lt;Array&lt;Boolean&gt;&gt;** |  | [optional] 
 **paragon** | **Boolean** |  | [optional] 
-
-## Code Sample
-
-```ruby
-require 'OpenapiClient'
-
-instance = OpenapiClient::Document.new(status: null,
-                                 printer_status: NORMAL,
-                                 internal_document_id: null,
-                                 type: PD,
-                                 external_id: c8ce7e26-5e31-4ab2-bc61-c328c8e48a81,
-                                 invoice_id: 2550065,
-                                 merchant: null,
-                                 cash_register_code: 88812345678900001,
-                                 amount: null,
-                                 issue_date: null,
-                                 create_date: null,
-                                 process_date: null,
-                                 customer: null,
-                                 paragon_id: null,
-                                 sequence_id: null,
-                                 uuid: O-0FA2C6629A154334A2C6629A15B-TEST,
-                                 pkp: lrHLrCafL0/TQhtZxuhCI/6ysy/qNzNiu0cOebbdXV5IbMpJFv2D+H/sGD7Flut+Vs9q4dSV0PBVucfKQq6S7wUcrg25Ti2+roZ/bl3NFXkpOQmwZCaftCwF4cLge5ufwDLBwzLBermQ0WDH3OwM6Iy8USDxbgWwBXrbxmRxZQgZu+BB9q/+svDDymfHjVXWqcn2qZuvVlRjydyx2LQ8FTQMVmvif4DHirtyfL7bBfUcuASgiHbNF/YD8ZNRVhTDG9+7BD6yDq5B8+4TJtDNhCKt71XCUe3naxzEVmkwdNsT8fVUQ2GCM/7rWo8vuB+bhzqn81ZDBBqGsrkSqDCNjg&#x3D;&#x3D;,
-                                 okp: FA97241C-791D8ADA-F286C808-DF6E5736-8022EC67,
-                                 qr_code: O-0FA2C6629A154334A2C6629A15B-TEST,
-                                 document_entries: null,
-                                 vat_rate_sums: null,
-                                 payment_types: null,
-                                 header: Dobry den,
-                                 footer: Tips not included,
-                                 exception: false,
-                                 electronic: false,
-                                 electronic_receipt: null,
-                                 header_image: null,
-                                 paragon: null)
-```
-
-
