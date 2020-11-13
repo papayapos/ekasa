@@ -16,7 +16,7 @@ Update cash register location
 ### Example
 
 ```bash
-curl --location --request POST 'https://localhost:13083/api/location/update' \
+curl --location --request POST 'http://localhost:13083/api/location/update' \
 --data-raw '{
   "gps": {
 		"x": "17.165377",

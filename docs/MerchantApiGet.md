@@ -16,7 +16,7 @@ eKasa returns info of actual merchant that is stored in CHDU
 ### Example
 
 ```bash
-curl --location --request POST 'https://localhost:13083/api/merchant/get' \
+curl --location --request POST 'http://localhost:13083/api/merchant/get' \
 --data-raw '{}'
 ```
 

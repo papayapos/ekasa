@@ -18,7 +18,7 @@ Create new receipt
 ### Example
 
 ```bash
-curl --location --request POST 'https://localhost:13083/api/document/store' \
+curl --location --request POST 'http://localhost:13083/api/document/store' \
 --data-raw '{
 	"header" : "Dobry den",
 	"footer" : "Tips not included",
