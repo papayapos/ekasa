@@ -14,7 +14,7 @@ Start a card payment. Only one terminal operation can be running at once
 ### Example
 
 ```bash
-curl --location --request POST 'http://{{base_url}}:13083/api/terminal/pay' \
+curl --location --request POST 'https://localhost:13083/api/terminal/pay' \
 --data-raw '{
     "externalId": "28f3af59-52af-42a6-a217-fc26278482db",
     "requestContents": {
