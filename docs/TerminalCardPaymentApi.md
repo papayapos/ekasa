@@ -18,9 +18,9 @@ curl --location --request POST 'http://localhost:13083/api/terminal/pay' \
 --data-raw '{
     "externalId": "28f3af59-52af-42a6-a217-fc26278482db",
     "requestContents": {
-        "operation": "CP",
-        "amount": "1.5",
-        "TransactionId": "28f3af59-52af-42a6-a217-fc26278482db"
+        "Operation": "CP",
+        "Amount": "1.5",
+        "Transaction_ID": "28f3af59-52af-42a6-a217-fc26278482db"
     },
     "printReceipt": false
 }'
@@ -37,9 +37,9 @@ curl --location --request POST 'http://localhost:13083/api/terminal/pay' \
 {
     "externalId": "28f3af59-52af-42a6-a217-fc26278482db",
     "requestContents": {
-        "operation": "CP",
-        "amount": "1.5",
-        "TransactionId": "28f3af59-52af-42a6-a217-fc26278482db"
+        "Operation": "CP",
+        "Amount": "1.5",
+        "Transaction_ID": "28f3af59-52af-42a6-a217-fc26278482db"
     },
     "printReceipt": false
 }
