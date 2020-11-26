@@ -20,28 +20,28 @@ Create new receipt
 ```bash
 curl --location --request POST 'http://localhost:13083/api/document/store' \
 --data-raw '{
-	"header" : "Dobry den",
-	"footer" : "Tips not included",
+    "header" : "Dobry den",
+    "footer" : "Tips not included",
 
-	"type" : "PD",
-	"amount" : 237.12,
+    "type" : "PD",
+    "amount" : 237.12,
 
-	"documentEntries" : [
-		{"price" : 75, "quantity" : 2, "name" : "Tovar 1", "vatRate" : "VAT_20", "itemType" : "SALE"},
-		{"price" : 87.123, "quantity" : 1, "name" : "Tovar 2", "vatRate" : "VAT_10", "itemType" : "SALE"},
-		{"price" : 10, "quantity" : 1, "name" : "Tovar X", "vatRate" : "VAT_0", "itemType" : "SALE", "voucherNumber" :  "123"},
-		{"price" : -15, "quantity" : 1, "name" : "JUP", "vatRate" : "VAT_0", "itemType" : "VOUCHER", "voucherNumber" :  "123"}
-	],
+    "documentEntries" : [
+        {"price" : 75, "quantity" : 2, "name" : "Tovar 1", "vatRate" : "VAT_20", "itemType" : "SALE"},
+        {"price" : 87.123, "quantity" : 1, "name" : "Tovar 2", "vatRate" : "VAT_10", "itemType" : "SALE"},
+        {"price" : 10, "quantity" : 1, "name" : "Tovar X", "vatRate" : "VAT_0", "itemType" : "SALE", "voucherNumber" :  "123"},
+        {"price" : -15, "quantity" : 1, "name" : "JUP", "vatRate" : "VAT_0", "itemType" : "VOUCHER", "voucherNumber" :  "123"}
+    ],
 
-	"payments" : {
-		"Card" : 237.12
-	},
+    "payments" : {
+        "Card" : 237.12
+    },
 
-	"printer" : {
-		"socket" : "tcp://192.168.88.87:9100",
- 		"numberOfCharInRow" : 48,
-		"codingNumber" : 30
-	}
+    "printer" : {
+        "socket" : "tcp://192.168.88.87:9100",
+        "numberOfCharInRow" : 48,
+        "codingNumber" : 30
+    }
 }'
 ```
 
@@ -54,28 +54,28 @@ curl --location --request POST 'http://localhost:13083/api/document/store' \
 
 ```yaml
 {
-	"header" : "Dobry den",
-	"footer" : "Tips not included",
+    "header" : "Dobry den",
+    "footer" : "Tips not included",
 
-	"type" : "PD",
-	"amount" : 237.12,
+    "type" : "PD",
+    "amount" : 237.12,
 
-	"documentEntries" : [
-		{"price" : 75, "quantity" : 2, "name" : "Tovar 1", "vatRate" : "VAT_20", "itemType" : "SALE"},
-		{"price" : 87.123, "quantity" : 1, "name" : "Tovar 2", "vatRate" : "VAT_10", "itemType" : "SALE"},
-		{"price" : 10, "quantity" : 1, "name" : "Tovar X", "vatRate" : "VAT_0", "itemType" : "SALE", "voucherNumber" :  "123"},
-		{"price" : -15, "quantity" : 1, "name" : "JUP", "vatRate" : "VAT_0", "itemType" : "VOUCHER", "voucherNumber" :  "123"}
-	],
+    "documentEntries" : [
+        {"price" : 75, "quantity" : 2, "name" : "Tovar 1", "vatRate" : "VAT_20", "itemType" : "SALE"},
+        {"price" : 87.123, "quantity" : 1, "name" : "Tovar 2", "vatRate" : "VAT_10", "itemType" : "SALE"},
+        {"price" : 10, "quantity" : 1, "name" : "Tovar X", "vatRate" : "VAT_0", "itemType" : "SALE", "voucherNumber" :  "123"},
+        {"price" : -15, "quantity" : 1, "name" : "JUP", "vatRate" : "VAT_0", "itemType" : "VOUCHER", "voucherNumber" :  "123"}
+    ],
 
-	"payments" : {
-		"Card" : 237.12
-	},
+    "payments" : {
+        "Card" : 237.12
+    },
 
-	"printer" : {
-		"socket" : "tcp://192.168.88.87:9100",
- 		"numberOfCharInRow" : 48,
-		"codingNumber" : 30
-	}
+    "printer" : {
+        "socket" : "tcp://192.168.88.87:9100",
+        "numberOfCharInRow" : 48,
+        "codingNumber" : 30
+    }
 }
 ```
 
@@ -83,7 +83,7 @@ curl --location --request POST 'http://localhost:13083/api/document/store' \
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **String** | Type of document | 
+**type** | **String** | Type of document [PD, UF, ND] | PD - receipt, UF - invoice, ND - testing receipt
 **external_id** | **String** | External custom id can be set for later search | [optional] 
 **invoice_id** | **String** | Id of invoice. Only required if document type is UF | [optional] 
 **amount** | **Float** | Amount of receipt. This is checked against sum of all items | 
@@ -107,7 +107,7 @@ Name | Type | Description | Notes
 **name** | **String** | Name of the item | 
 **reference_document_id** | **String** | Reference id of receipt which this UPDATE or REFUND applies on | [optional] 
 **vat_rate** | **String** | VAT rate assigned to the item | 
-**item_type** | **String** | Document type | 
+**item_type** | **String** | Document item type [SALE, PACKING_REFUND, REFUND, UPDATE, DISCOUNT, DEPOSIT, VOUCHER] | DEPOSIT - down payment for goods made in advance, VOUCHER - one-purpose voucher for specific product
 **special_regulation** | **String** | Specification of reason for 0% VAT rate (optional) | [optional] 
 **seller** | [**Seller**](DocumentApiStore.md#Seller.md) |  | [optional] 
 **voucher_number** | **String** | Number of exchange voucher if itemType is VOUCHER | [optional] 
