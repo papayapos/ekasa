@@ -23,6 +23,7 @@ Service | HTTP request | Description
 [**Card Payment**](docs/TerminalCardPaymentApi.md#CardPayment) | **POST** /api/terminal/pay | Card payment
 [**Terminal Totals**](docs/TerminalTotalsApi.md#Totals) | **POST** /api/terminal/totals | Terminal totals report
 [**Print**](docs/CustomPrintApi.md#Print) | **POST** /api/print | Print custom string
+[**Setup**](docs/SetupApi.md#Setup) | **POST** /api/setup | Setup eKasa Pay settings
 
 ## Documentation for Authorization
 
