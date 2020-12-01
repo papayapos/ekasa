@@ -43,9 +43,9 @@ curl --location --request POST 'http://localhost:13083/api/terminal/totals' \
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**print_receipt** | **Boolean** | set if the terminal should print a receipt immediately. Receipt data us sent back in the response regardless of this setting | [optional] 
-**transaction_id** | **String** |  | [optional] 
-**sub_totals** | **Boolean** |  | [optional] 
+**printReceipt** | **Boolean** | set if the terminal should print a receipt immediately. Receipt data us sent back in the response regardless of this setting | [optional] 
+**transactionId** | **String** |  | [optional] 
+**subTotals** | **Boolean** |  | [optional] 
 
 ### Example Response Body
 
@@ -54,42 +54,42 @@ Name | Type | Description | Notes
   "warning": "Warning, you should solve this, but eKasa works",
   "success": false,
   "message": {
-    "Result": "0",
-    "RespMessage": "incididunt ad",
-    "HostCounters": [
+    "result": "0",
+    "respMessage": "incididunt ad",
+    "hostCounters": [
       {
-        "RecordId": "VISA",
-        "DebitCount": "1",
-        "DebitAmount": "1.5",
-        "CreditCount": "3",
-        "CreditAmount": "25.35"
+        "recordId": "VISA",
+        "debitCount": "1",
+        "debitAmount": "1.5",
+        "creditCount": "3",
+        "creditAmount": "25.35"
       },
       {
-        "RecordId": "VISA",
-        "DebitCount": "1",
-        "DebitAmount": "1.5",
-        "CreditCount": "3",
-        "CreditAmount": "25.35"
+        "recordId": "VISA",
+        "debitCount": "1",
+        "debitAmount": "1.5",
+        "creditCount": "3",
+        "creditAmount": "25.35"
       }
     ],
-    "TerminalCounters": [
+    "terminalCounters": [
       {
-        "RecordId": "VISA",
-        "DebitCount": "1",
-        "DebitAmount": "1.5",
-        "CreditCount": "3",
-        "CreditAmount": "25.35"
+        "recordId": "VISA",
+        "debitCount": "1",
+        "debitAmount": "1.5",
+        "creditCount": "3",
+        "creditAmount": "25.35"
       },
       {
-        "RecordId": "VISA",
-        "DebitCount": "1",
-        "DebitAmount": "1.5",
-        "CreditCount": "3",
-        "CreditAmount": "25.35"
+        "recordId": "VISA",
+        "debitCount": "1",
+        "debitAmount": "1.5",
+        "creditCount": "3",
+        "creditAmount": "25.35"
       }
     ],
-    "CustomerReceipt": "nisi in dolor",
-    "MerchantReceipt": "deserunt laborum laboris Duis"
+    "customerReceipt": "nisi in dolor",
+    "merchantReceipt": "deserunt laborum laboris Duis"
   },
   "errorMessage": "ullamco deserunt eiusmod mollit"
 }
@@ -102,25 +102,25 @@ Name | Type | Description | Notes
 **warning** | **String** | Filled only if any warning | [optional] 
 **success** | **Boolean** | Shows if request processing was successful | [optional] 
 **message** | [**PaxTotalsResponse**](TerminalTotalsApi.md#PaxTotalsResponse) |  | [optional] 
-**error_message** | **String** |  | [optional] 
+**errorMessage** | **String** |  | [optional] 
 
 #### PaxTotalsResponse
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **result** | **String** | Operation result. \&quot;0\&quot; for success, anything else for failure | [optional] 
-**resp_message** | **String** | Additional text information. | [optional] 
-**host_counters** | [**Array&lt;PaxTotalsResponseCounter&gt;**](TerminalTotalsApi.md#PaxTotalsResponseCounter) |  | [optional] 
-**terminal_counters** | [**Array&lt;PaxTotalsResponseCounter&gt;**](TerminalTotalsApi.md#PaxTotalsResponseCounter) |  | [optional] 
-**customer_receipt** | **String** | Customer receipt (formatted text) | [optional] 
-**merchant_receipt** | **String** | Merchant receipt (formatted text) | [optional] 
+**respMessage** | **String** | Additional text information. | [optional] 
+**hostCounters** | [**Array&lt;PaxTotalsResponseCounter&gt;**](TerminalTotalsApi.md#PaxTotalsResponseCounter) |  | [optional] 
+**terminalCounters** | [**Array&lt;PaxTotalsResponseCounter&gt;**](TerminalTotalsApi.md#PaxTotalsResponseCounter) |  | [optional] 
+**customerReceipt** | **String** | Customer receipt (formatted text) | [optional] 
+**merchantReceipt** | **String** | Merchant receipt (formatted text) | [optional] 
 
 #### PaxTotalsResponseCounter
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**record_id** | **String** | Name of the record | [optional] 
-**debit_count** | **String** | Number of debit card transactions | [optional] 
-**debit_amount** | **String** | Total value of debit card transactions | [optional] 
-**credit_count** | **String** | Number of credit card transactions | [optional] 
-**credit_amount** | **String** | Total value of credit card transactions | [optional] 
+**recordId** | **String** | Name of the record | [optional] 
+**debitCount** | **String** | Number of debit card transactions | [optional] 
+**debitAmount** | **String** | Total value of debit card transactions | [optional] 
+**creditCount** | **String** | Number of credit card transactions | [optional] 
+**creditAmount** | **String** | Total value of credit card transactions | [optional] 
