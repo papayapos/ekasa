@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**error_type** | **String** |  | [optional] 
-**error_code** | **Integer** |  | [optional] 
+**errorType** | **String** |  | [optional] 
+**errorCode** | **Integer** |  | [optional] 
 **message** | **String** |  | [optional] 
 **detail** | **String** |  | [optional] 

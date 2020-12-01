@@ -44,10 +44,10 @@ curl --location --request POST 'http://localhost:13083/api/merchant/store' \
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**identification_data** | **String** | Identification data generated in clients eKasa account. XML file as string. | 
-**authentication_data** | **String** | Authentication data generated in clients eKasa account. XML file as string. | 
-**key_store_password** | **String** | Password for keystore | 
-**private_key_password** | **String** | Password for private key | 
+**identificationData** | **String** | Identification data generated in clients eKasa account. XML file as string. | 
+**authenticationData** | **String** | Authentication data generated in clients eKasa account. XML file as string. | 
+**keyStorePassword** | **String** | Password for keystore | 
+**privateKeyPassword** | **String** | Password for private key | 
 
 ### Example Response Body
 
@@ -92,21 +92,21 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **warning** | **String** | Filled only if any warning | [optional] 
 **merchant** | [**Merchant**](MerchantApiStore.md#Merchant) |  | [optional] 
-**error_message** | **String** |  | [optional] 
+**errorMessage** | **String** |  | [optional] 
 
 #### Merchant
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **status** | [**EkasaStatus**](EkasaStatus.md) |  | [optional] 
-**printer_status** | **String** | Printer status | [optional] 
+**printerStatus** | **String** | Printer status | [optional] 
 **id** | **Integer** | Generated ID by PPEKK | [optional] 
-**corporate_full_name** | **String** | Corporate name as written in register | [optional] 
+**corporateFullName** | **String** | Corporate name as written in register | [optional] 
 **ico** | **String** | Company ID | [optional] 
 **dic** | **String** | Company DIC | [optional] 
-**ic_dph** | **String** | Vat number of the company. If filled, merchant is automatically taken as Tax payer, otherwise merchant is set as NON! Tax payer | [optional] 
-**physical_address** | [**PhysicalAddress**](MerchantApiStore.md#PhysicalAddress) |  | [optional] 
-**organization_unit** | [**OrganizationUnit**](MerchantApiStore.md#OrganizationUnit) |  | [optional] 
+**icDph** | **String** | Vat number of the company. If filled, merchant is automatically taken as Tax payer, otherwise merchant is set as NON! Tax payer | [optional] 
+**physicalAddress** | [**PhysicalAddress**](MerchantApiStore.md#PhysicalAddress) |  | [optional] 
+**organizationUnit** | [**OrganizationUnit**](MerchantApiStore.md#OrganizationUnit) |  | [optional] 
 
 #### PhysicalAddress
 
@@ -115,21 +115,21 @@ Name | Type | Description | Notes
 **country** | **String** | Country. e.g. Slovenská Republika | [optional] 
 **municipality** | **String** | Municipality, its name of town, e.g. Karlova ves | [mandatory] 
 **street** | **String** | Name of the street, e.g. Čaklovská | [mandatory] 
-**building_number** | **String** | orientačné číslo | [optional] 
-**property_registration_number** | **String** | číslo budovy | [optional] 
-**postal_code** | **String** | Postal code | [mandatory] 
+**buildingNumber** | **String** | orientačné číslo | [optional] 
+**propertyRegistrationNumber** | **String** | číslo budovy | [optional] 
+**postalCode** | **String** | Postal code | [mandatory] 
 
 #### OrganizationUnit
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | Venue name (optional) | [optional] 
-**cash_register_code** | **String** | Code given to cash register by Tax office (mandatory) | 
-**cash_register_type** | **String** | Type of cash register. If mobile define PORTABLE else STANDARD (mandatory) | 
+**cashRegisterCode** | **String** | Code given to cash register by Tax office (mandatory) | 
+**cashRegisterType** | **String** | Type of cash register. If mobile define PORTABLE else STANDARD (mandatory) | 
 **location** | [**Location**](MerchantApiStore.md#Location) |  | [optional] 
 
 #### Location
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**physical_address** | [**PhysicalAddress**](MerchantApiStore.md#PhysicalAddress) |  | [optional] 
+**physicalAddress** | [**PhysicalAddress**](MerchantApiStore.md#PhysicalAddress) |  | [optional] 

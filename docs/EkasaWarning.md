@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**warning_type** | **String** |  | [optional] 
-**warning_code** | **Integer** |  | [optional] 
+**warningType** | **String** |  | [optional] 
+**warningCode** | **Integer** |  | [optional] 
 **message** | **String** |  | [optional] 
 **detail** | **String** |  | [optional] 

@@ -172,4 +172,4 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **warning** | **String** | Filled only if any warning | [optional] 
 **document** | [**Document**](Document.md) |  | [optional] 
-**error_message** | **String** |  | [optional] 
+**errorMessage** | **String** |  | [optional] 

@@ -40,7 +40,7 @@ curl --location --request POST 'http://localhost:13083/api/print' \
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**print_data** | **String** | Raw data in string for printing | [required] 
+**printData** | **String** | Raw data in string for printing | [required] 
 **printer** | [**Printer**](Printer.md) | Printer details, for Pax only empty object is needed | [required]
 
 ### Example Response Body
@@ -56,6 +56,6 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **warning** | **String** | Filled only if any warning | [optional] 
-**raw_data** | **String** | Printed data | [required] 
-**error_message** | **String** |  | [optional] 
+**rawData** | **String** | Printed data | [required] 
+**errorMessage** | **String** |  | [optional] 
 

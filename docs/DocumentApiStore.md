@@ -84,40 +84,40 @@ curl --location --request POST 'http://localhost:13083/api/document/store' \
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **String** | Type of document [PD, UF, ND] | PD - receipt, UF - invoice, ND - testing receipt
-**external_id** | **String** | External custom id can be set for later search | [optional] 
-**invoice_id** | **String** | Id of invoice. Only required if document type is UF | [optional] 
+**externalId** | **String** | External custom id can be set for later search | [optional] 
+**invoiceId** | **String** | Id of invoice. Only required if document type is UF | [optional] 
 **amount** | **Float** | Amount of receipt. This is checked against sum of all items | 
 **customer** | [**Customer**](DocumentApiStore.md#Customer) |  | [optional] 
-**paragon_date** | **DateTime** | If this is parameter is filled, evidence of paragon is going to be sent to eKasa and printed | [optional] 
-**document_entries** | [**Array&lt;DocumentReceiptItem&gt;**](DocumentApiStore.md#DocumentReceiptItem) | Items sold on receipt. | [optional] 
+**paragonDate** | **DateTime** | If this is parameter is filled, evidence of paragon is going to be sent to eKasa and printed | [optional] 
+**documentEntries** | [**Array&lt;DocumentReceiptItem&gt;**](DocumentApiStore.md#DocumentReceiptItem) | Items sold on receipt. | [optional] 
 **payments** | **Hash&lt;String, Float&gt;** | Payment types and sums used for receipt payment. This parameter sum is NOT! checked against receipt sum. | [optional] 
 **header** | **String** | Custom header to print at the top of the receipt | [optional] 
 **footer** | **String** | Custom footer to print at the bottom of the receipt | [optional] 
 **printer** | [**Printer**](Printer.md) |  | 
-**electronic_receipt** | **Boolean** | If client wants electronic receipt, set true. Receipt will not be printed only if is online. For offline receipt will be printed. | [optional] 
+**electronicReceipt** | **Boolean** | If client wants electronic receipt, set true. Receipt will not be printed only if is online. For offline receipt will be printed. | [optional] 
 **exception** | **Boolean** |  | [optional] 
 
 #### DocumentReceiptItem
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**external_id** | **String** | External id | [optional] 
+**externalId** | **String** | External id | [optional] 
 **price** | **Float** | Unit price of the item, not the summary! | 
 **quantity** | **Float** | Quantity of the item | 
 **name** | **String** | Name of the item | 
-**reference_document_id** | **String** | Reference id of receipt which this UPDATE or REFUND applies on | [optional] 
-**vat_rate** | **String** | VAT rate assigned to the item | 
-**item_type** | **String** | Document item type [SALE, PACKING_REFUND, REFUND, UPDATE, DISCOUNT, DEPOSIT, VOUCHER] | DEPOSIT - down payment for goods made in advance, VOUCHER - one-purpose voucher for specific product
-**special_regulation** | **String** | Specification of reason for 0% VAT rate (optional) | [optional] 
+**referenceDocumentId** | **String** | Reference id of receipt which this UPDATE or REFUND applies on | [optional] 
+**vatRate** | **String** | VAT rate assigned to the item | 
+**itemType** | **String** | Document item type [SALE, PACKING_REFUND, REFUND, UPDATE, DISCOUNT, DEPOSIT, VOUCHER] | DEPOSIT - down payment for goods made in advance, VOUCHER - one-purpose voucher for specific product
+**specialRegulation** | **String** | Specification of reason for 0% VAT rate (optional) | [optional] 
 **seller** | [**Seller**](DocumentApiStore.md#Seller.md) |  | [optional] 
-**voucher_number** | **String** | Number of exchange voucher if itemType is VOUCHER | [optional] 
+**voucherNumber** | **String** | Number of exchange voucher if itemType is VOUCHER | [optional] 
 
 #### Seller
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | Seller id | 
-**seller_id_type** | **String** | Seller id type | 
+**sellerIdType** | **String** | Seller id type | 
 
 #### VatRateSum
 
@@ -132,9 +132,9 @@ Name | Type | Description | Notes
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**printer_status** | **String** | Printer status | [optional] 
+**printerStatus** | **String** | Printer status | [optional] 
 **id** | **String** | Customer ID. Only numbers and alpha numeric characters are allowed | 
-**customer_id_type** | **String** | Customer type can be ICO, DIC, IC_DPH, or INE | 
+**customerIdType** | **String** | Customer type can be ICO, DIC, IC_DPH, or INE | 
 
 ### Example Response Body
 
@@ -264,4 +264,4 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **warning** | **String** | Filled only if any warning | [optional] 
 **document** | [**Document**](Document.md) |  | [optional] 
-**error_message** | **String** |  | [optional] 
+**errorMessage** | **String** |  | [optional] 

@@ -64,19 +64,19 @@ curl --location --request POST 'http://localhost:13083/api/location/update' \
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**fix_location** | [**FixLocation**](LocationApiFix.md#FixLocation) |  | [optional] 
+**fixLocation** | [**FixLocation**](LocationApiFix.md#FixLocation) |  | [optional] 
 
 ### FixLocation
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **status** | [**EkasaStatus**](EkasaStatus.md) |  | [optional] 
-**printer_status** | **String** | Printer status | [optional] 
-**create_date** | **DateTime** |  | [optional] 
-**physical_address** | [**PhysicalAddress**](LocationApiFix.md#PhysicalAddress) |  | [optional] 
+**printerStatus** | **String** | Printer status | [optional] 
+**createDate** | **DateTime** |  | [optional] 
+**physicalAddress** | [**PhysicalAddress**](LocationApiFix.md#PhysicalAddress) |  | [optional] 
 **gps** | [**Gps**](LocationApiFix.md#Gps) |  | [optional] 
 **other** | **String** |  | [optional] 
-**use_last_merchant** | **Boolean** |  | [optional] 
+**useLastMerchant** | **Boolean** |  | [optional] 
 
 ### Example Response
 
@@ -133,23 +133,23 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **warning** | **String** | Filled only if any warning | [optional] 
 **location** | [**Location**](LocationApiFix.md#Location) |  | [optional] 
-**error_message** | **String** |  | [optional] 
+**errorMessage** | **String** |  | [optional] 
 
 ### Location
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **status** | [**EkasaStatus**](EkasaStatus.md) |  | [optional] 
-**printer_status** | **String** | Printer status | [optional] 
-**internal_id** | **Integer** |  | [optional] 
-**physical_address** | [**PhysicalAddress**](LocationApiFix.md#PhysicalAddress) |  | [optional] 
+**printerStatus** | **String** | Printer status | [optional] 
+**internalId** | **Integer** |  | [optional] 
+**physicalAddress** | [**PhysicalAddress**](LocationApiFix.md#PhysicalAddress) |  | [optional] 
 **gps** | [**Gps**](LocationApiFix.md#Gps) |  | [optional] 
 **other** | **String** |  | [optional] 
-**create_date** | **DateTime** |  | [optional] 
-**process_date** | **DateTime** |  | [optional] 
-**cash_register_code** | **String** |  | [optional] 
+**createDate** | **DateTime** |  | [optional] 
+**processDate** | **DateTime** |  | [optional] 
+**cashRegisterCode** | **String** |  | [optional] 
 **merchant** | [**Merchant**](MerchantApiGet.md#Merchant) |  | [optional] 
-**sending_count** | **Integer** |  | [optional] 
+**sendingCount** | **Integer** |  | [optional] 
 
 ### GPS
 
@@ -165,6 +165,6 @@ Name | Type | Description | Notes
 **country** | **String** | Country. e.g. Slovenská Republika | [optional] 
 **municipality** | **String** | Municipality, its name of town, e.g. Karlova ves | [mandatory] 
 **street** | **String** | Name of the street, e.g. Čaklovská | [mandatory] 
-**building_number** | **String** | orientačné číslo | [optional] 
-**property_registration_number** | **String** | číslo budovy | [optional] 
-**postal_code** | **String** | Postal code | [mandatory] 
+**buildingNumber** | **String** | orientačné číslo | [optional] 
+**propertyRegistrationNumber** | **String** | číslo budovy | [optional] 
+**postalCode** | **String** | Postal code | [mandatory] 
