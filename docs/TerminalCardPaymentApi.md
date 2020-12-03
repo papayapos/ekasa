@@ -22,7 +22,8 @@ curl --location --request POST 'http://localhost:13083/api/terminal/pay' \
         "amount": "1.5",
         "transactionId": "28f3af59-52af-42a6-a217-fc26278482db"
     },
-    "printReceipt": false
+    "printCustomerReceipt": true,
+    "printMerchantReceipt": false
 }'
 ```
 
