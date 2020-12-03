@@ -41,7 +41,8 @@ curl --location --request POST 'http://localhost:13083/api/terminal/pay' \
         "amount": "1.5",
         "transactionId": "28f3af59-52af-42a6-a217-fc26278482db"
     },
-    "printReceipt": false
+    "printCustomerReceipt": true,
+    "printMerchantReceipt": false
 }
 ```
 
@@ -51,7 +52,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **externalId** | **String** | id from external software | [optional] 
 **requestContents** | [**PaxPaymentRequest**](TerminalCardPaymentApi.md#PaxPaymentRequest) |  | [optional] 
-**printReceipt** | **Boolean** | set if the terminal should print a receipt immediately. Receipt data us sent back in the response regardless of this setting | [optional] 
+**printCustomerReceipt** | **Boolean** | set if the terminal should print a receipt for customer immediately. Receipt data us sent back in the response regardless of this setting | [optional] 
+**printMerchantReceipt** | **Boolean** | set if the terminal should print a receipt for merchant immediately. Receipt data us sent back in the response regardless of this setting | [optional] 
 
 #### PaxPaymentRequest
 
