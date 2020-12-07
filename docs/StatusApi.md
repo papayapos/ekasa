@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 > Printer Status
 
-Setup custom settings for eKasa Pay
+Test if printer is ready for printing
 
 ### Example
 
