@@ -24,6 +24,8 @@ Service | HTTP request | Description
 [**Terminal Totals**](docs/TerminalTotalsApi.md#Totals) | **POST** /api/terminal/totals | Terminal totals report
 [**Print**](docs/CustomPrintApi.md#Print) | **POST** /api/print | Print custom string
 [**Setup**](docs/SetupApi.md#Setup) | **POST** /api/setup | Setup eKasa Pay settings
+[**Status Printer**](docs/StatusApi.md#Printer) | **POST** /api/status/printer | Get printer status
+
 
 ## Documentation for Authorization
 
