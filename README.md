@@ -21,8 +21,8 @@ Service | HTTP request | Description
 [**Get Merchant**](docs/MerchantApiGet.md#GetMerchant) | **POST** /api/merchant/get | Get merchant
 [**Store Merchant**](docs/MerchantApiStore.md#StoreMerchant) | **POST** /api/merchant/store | Store merchant
 [**Terminal Activation**](docs/TerminalApiRegister.md#Activation) | **POST** /api/terminal/register | Terminal Activation and Registration
-[**Card Payment**](docs/TerminalCardPaymentApi.md#CardPayment) | **POST** /api/terminal/pay | Card payment
-[**Terminal Totals**](docs/TerminalTotalsApi.md#Totals) | **POST** /api/terminal/totals | Terminal totals report
+[**Card Payment**](docs/TerminalApiCardPayment.md#CardPayment) | **POST** /api/terminal/pay | Card payment
+[**Terminal Totals**](docs/TerminalApiTotals.md#Totals) | **POST** /api/terminal/totals | Terminal totals report
 [**Print**](docs/CustomPrintApi.md#Print) | **POST** /api/print | Print custom string
 [**Setup**](docs/SetupApi.md#Setup) | **POST** /api/setup | Setup eKasa Pay settings
 [**Status Printer**](docs/StatusApi.md#Printer) | **POST** /api/status/printer | Get printer status

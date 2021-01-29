@@ -4,10 +4,11 @@ All URIs are relative to *https://localhost:13083*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Terminal Activation**](docs/TerminalActivationApi.md#Activation) | **POST** /api/terminal/register | Terminal Activation and Registration
-[**Card Payment**](TerminalCardPaymentApi.md#CardPayment) | **POST** /api/terminal/pay | Card payment
-[**Totals**](TerminalTotalsApi.md#Totals) | **POST** /api/terminal/totals | Terminal totals report
+[**Terminal Activation**](docs/TerminalApiRegister.md#Activation) | **POST** /api/terminal/register | Terminal Activation and Registration
+[**Card Payment**](TerminalApiCardPayment.md#CardPayment) | **POST** /api/terminal/pay | Card payment
+[**Totals**](TerminalApiTotals.md#Totals) | **POST** /api/terminal/totals | Terminal totals report
 
+# Activation
 
 ### Example
 
@@ -74,14 +75,13 @@ Name | Type | Description | Notes
 **merchantName** | **String** | Name of the merchant registered for terminal | [mandatory]
 **ico** | **String** | ICO of the merchant registered for terminal   | [mandatory] 
 **dic** | **String** | DIC of the merchant registered for terminal | [optional]
-**merchantAddress** | [**Merchant Address**](TerminalApiRegister.md#MerchantAddress) |  | [optional] 
+**merchantAddress** | [**Merchant Address**](TerminalApiRegister.md#MerchantAddress) | Address of the merchant registered for terminal | [optional] 
 **venueName** | **String** | Name of the merchant registered for terminal | [optional]
-**venueAddress** | [**Venue Address**](TerminalApiRegister.md#VenueAddress) |  | [optional] 
+**venueAddress** | [**Venue Address**](TerminalApiRegister.md#VenueAddress) | Address of the venue that is registered for terminal. | [optional] 
 **terminalId** | **String** | TID of the terminal | [mandatory] 
 
 
 #### MerchantAddress
-Address of the merchant registered for terminal.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -93,7 +93,6 @@ Name | Type | Description | Notes
 
 
 #### VenueAddress
-Address of the venue that is registered for terminal.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

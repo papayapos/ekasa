@@ -4,9 +4,9 @@ All URIs are relative to *https://localhost:13083*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Terminal Activation**](docs/TerminalActivationApi.md#Activation) | **POST** /api/terminal/register | Terminal Activation and Registration
-[**Card Payment**](TerminalCardPaymentApi.md#CardPayment) | **POST** /api/terminal/pay | Card payment
-[**Totals**](TerminalTotalsApi.md#Totals) | **POST** /api/terminal/totals | Terminal totals report
+[**Terminal Activation**](docs/TerminalApiRegister.md#Activation) | **POST** /api/terminal/register | Terminal Activation and Registration
+[**Card Payment**](TerminalApiCardPayment.md#CardPayment) | **POST** /api/terminal/pay | Card payment
+[**Totals**](TerminalApiTotals.md#Totals) | **POST** /api/terminal/totals | Terminal totals report
 
 # CardPayment
 
