@@ -13,7 +13,7 @@ Method | HTTP request | Description
 ### Example
 
 ```bash
-curl --location --request POST 'http://localhost:13083/api/terminal/pay' \
+curl --location --request POST 'http://localhost:13083/api/terminal/register' \
 --data-raw '{
   "merchantName":"TEST",
   "ico":"99999999",
@@ -33,7 +33,9 @@ curl --location --request POST 'http://localhost:13083/api/terminal/pay' \
     "number":"4",
     "postalCode":"99999"
   },
-  "terminalId":"99887766"
+  "terminalId" : "99887766",
+  "integrator" : "APPLE",
+  "dealer" : "GOOGLE"
 }'
 ```
 
