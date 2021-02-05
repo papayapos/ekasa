@@ -1,0 +1,17 @@
+{
+	"header" : "Dobry den",
+	"footer" : "Tips not included",
+
+	"type" : "PD",
+	"amount" : 243.51,
+
+	"documentEntries" : [
+		{"price" : 100.1234, "quantity" : 2.4321, "name" : "Tovar 1", "vatRate" : "VAT_0", "itemType" : "SALE"}
+	],
+
+	"printer" : {
+		"socket" : "tcp://192.168.88.87:9100",
+ 		"numberOfCharInRow" : 48,
+		"codingNumber" : 30
+	}
+}

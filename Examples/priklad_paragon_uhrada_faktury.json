@@ -1,0 +1,15 @@
+{
+	"header" : "Dobry den",
+	"footer" : "Tips not included",
+
+	"type" : "UF",
+	"amount" : 237.23,
+	"invoiceId" : "FA00001",
+	"paragonDate" : "2018-12-12T15:50:14+01:00",
+
+	"printer" : {
+		"socket" : "tcp://192.168.88.87:9100",
+ 		"numberOfCharInRow" : 48,
+		"codingNumber" : 30
+	}
+}

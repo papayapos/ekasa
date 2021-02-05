@@ -1,0 +1,15 @@
+{
+	"physicalAddress": {
+		"country": "Slovenská Republika",
+		"municipality": "Bratislava",
+		"street": "Prievozská",
+		"buildingNumber" : "74",
+		"postalCode": "82101"
+	},
+
+	"printer" : {
+		"socket" : "tcp://192.168.88.87:9100",
+ 		"numberOfCharInRow" : 48,
+		"codingNumber" : 30
+	}
+}

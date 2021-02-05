@@ -1,0 +1,12 @@
+{
+	"gps": {
+		"x": "17.165377",
+		"y": "48.148962"
+	},
+
+	"printer" : {
+		"socket" : "tcp://192.168.88.87:9100",
+ 		"numberOfCharInRow" : 48,
+		"codingNumber" : 30
+	}
+}

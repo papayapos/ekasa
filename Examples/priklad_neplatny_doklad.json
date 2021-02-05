@@ -1,0 +1,20 @@
+{
+	"header" : "Dobry den",
+	"footer" : "Tips not included",
+
+	"type" : "ND",
+	"amount" : 2,
+
+	"electronicReceipt" : true,
+
+	"printer" : {
+		"socket" : "tcp://192.168.88.87:9100",
+ 		"numberOfCharInRow" : 48,
+		"codingNumber" : 30
+	},
+
+	"documentEntries" : [
+		{"price" : 0.5, "quantity" : 2, "name" : "Tovar 1", "vatRate" : "VAT_20", "itemType" : "SALE"},
+		{"price" : 1, "quantity" : 1, "name" : "Tovar 2", "vatRate" : "VAT_10", "itemType" : "SALE"}
+	]
+}

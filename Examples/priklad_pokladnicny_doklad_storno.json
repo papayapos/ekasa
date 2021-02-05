@@ -1,0 +1,18 @@
+{
+	"header" : "Dobry den",
+	"footer" : "Tips not included",
+
+	"type" : "PD",
+	"amount" : -150,
+
+	"documentEntries" : [
+		{"price" : -75, "quantity" : 2, "name" : "Tovar 1", "vatRate" : "VAT_20", "itemType" : "REFUND",
+			"referenceDocumentId": "A9E884B8-D7F29C04-61A841C4-FF8BD100-029B19A9"}
+	],
+
+	"printer" : {
+		"socket" : "tcp://192.168.88.87:9100",
+ 		"numberOfCharInRow" : 48,
+		"codingNumber" : 30
+	}
+}

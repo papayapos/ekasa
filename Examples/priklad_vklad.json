@@ -1,0 +1,10 @@
+{
+	"amount" : 0.01,
+	"footer" : "SI ZABIL!",
+
+	"printer" : {
+		"socket" : "tcp://192.168.88.87:9100",
+ 		"numberOfCharInRow" : 48,
+		"codingNumber" : 30
+	}
+}

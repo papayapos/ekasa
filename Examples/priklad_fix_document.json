@@ -1,0 +1,9 @@
+{
+    "fixDocument" : {
+        "useLastMerchant" : true,
+        "createDate" : "2019-11-18T17:28:14+01:00",
+        "documentEntries" : [
+            { "name" : "Daco dobre" , "quantity" : 1}
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+{
+	"documentBySequenceId" : {
+		"sequenceId" : "25",
+		"month" : "5",
+		"year" : "2019"
+	},
+
+	"printer" : {
+		"socket" : "tcp://192.168.88.87:9100",
+ 		"numberOfCharInRow" : 48,
+		"codingNumber" : 30
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"header" : "Dobry den",
+	"footer" : "Tips not included",
+
+	"type" : "PD",
+	"amount" : 247.23,
+
+	"documentEntries" : [
+		{"price" : 75, "quantity" : 2, "name" : "Tovar 1", "vatRate" : "VAT_20", "itemType" : "SALE",
+			"seller" : {"id" : "blabla", "sellerIdType" : "DIC"}
+		},
+		{"price" : 87.23, "quantity" : 1, "name" : "Tovar 2", "vatRate" : "VAT_10", "itemType" : "SALE"},
+		{"price" : 10, "quantity" : 1, "name" : "Tovar X", "vatRate" : "VAT_0", "itemType" : "SALE"}
+	],
+
+	"printer" : {
+		"socket" : "tcp://192.168.88.87:9100",
+ 		"numberOfCharInRow" : 48,
+		"codingNumber" : 30
+	}
+}

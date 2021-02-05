@@ -1,0 +1,24 @@
+{
+	"header" : "Dobry den",
+	"footer" : "Tips not included",
+
+	"type" : "PD",
+	"amount" : 237.12,
+
+	"documentEntries" : [
+		{"price" : 75, "quantity" : 2, "name" : "Tovar 1 湯", "vatRate" : "VAT_20", "itemType" : "SALE"},
+		{"price" : 87.123, "quantity" : 1, "name" : "Tovar 2", "vatRate" : "VAT_10", "itemType" : "SALE"},
+		{"price" : 10, "quantity" : 1, "name" : "Tovar X", "vatRate" : "VAT_0", "itemType" : "SALE", "voucherNumber" :  "123"},
+		{"price" : -15, "quantity" : 1, "name" : "JUP", "vatRate" : "VAT_0", "itemType" : "VOUCHER", "voucherNumber" :  "123"}
+	],
+
+	"payments" : {
+		"Card" : 237.12
+	},
+
+	"printer" : {
+		"socket" : "tcp://192.168.88.87:9100",
+ 		"numberOfCharInRow" : 48,
+		"codingNumber" : 30
+	}
+}
