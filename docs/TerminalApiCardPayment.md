@@ -48,6 +48,22 @@ curl --location --request POST 'http://localhost:13083/api/terminal/pay' \
 }
 ```
 
+
+### Cancel previous payment example
+
+```yaml
+{
+    "externalId": "28f3af59-52af-42a6-a217-fc26278482db",
+    "requestContents": {
+        "operation": "CC",
+        "hostTransId": "04005663  210217",
+        "transactionId": "28f3af59-52af-42a6-a217-fc26278482db"
+    },
+    "printCustomerReceipt": true,
+    "printMerchantReceipt": false
+}
+```
+
 ### Request Parameters
 
 Name | Type | Description | Notes
@@ -64,6 +80,7 @@ Name | Type | Description | Notes
 **operation** | **String** | Operation identifier. CP for payment, CC for cancel, CR for refund | [optional] 
 **amount** | **String** | Amount, as a string, with a . as a decimal separator | [optional] 
 **transactionId** | **String** | ID of the transaction, for the terminal | [optional] 
+**hostTransId** | **String** | ID of the transaction in the payment host for the transaction that is to be canceled. Ignored if operation is not CC | [optional] 
 
 ### Example Response Body
 
@@ -74,8 +91,15 @@ Name | Type | Description | Notes
   "message": {
     "result": "0",
     "respMessage": "Ok",
+    "aid": "A0000000032010",
     "authCode": "581281",
     "cardBrand": "Visa Prepaid",
+    "currencyCode": "978",
+    "hostTransId": "04474A8A59210217",
+    "maskedPan": "123456******7890",
+    "sequenceNumber": "001003022",
+    "terminalId": "POSCOM03",
+    "transactionId": "d6292665-3bb3-438c-b40e-7b383dbd348c"
     "bin": "479608",
     "hostRc": "proident qui",
     "pinIndicator": "N",
@@ -102,8 +126,15 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **result** | **String** | Operation result | [optional] 
 **respMessage** | **String** | Additional text information of Transaction result. It could be sent by host ,or locally by Payment application. | [optional] 
+**aid** | **String** | Authentication ID of the payment | [optional] 
 **authCode** | **String** | Autorisation Code | [optional] 
 **cardBrand** | **String** | Card Brand (VISA , MasterCard ...) | [optional] 
+**currencyCode** | **String** | Numeric currency code according to ISO 4217 | [optional] 
+**hostTransId** | **String** | Transaction ID in the payment host | [optional] 
+**maskedPan** | **String** | Card number with middle digits masked by * characters | [optional] 
+**sequenceNumber** | **String** | Sequence no. of the payment | [optional] 
+**terminalId** | **String** | ID of the Pax terminal | [optional] 
+**transactionId** | **String** | ID of the transaction, set in the request that called this payment | [optional] 
 **bin** | **String** | Card BIN (first 6 digits of card number) | [optional] 
 **hostRc** | **String** | Host response code | [optional] 
 **pinIndicator** | **String** | Information , whether PIN was entered (Values: Y/N) | [optional] 
