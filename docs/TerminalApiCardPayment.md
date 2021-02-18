@@ -28,6 +28,22 @@ curl --location --request POST 'http://localhost:13083/api/terminal/pay' \
 }'
 ```
 
+#### Cancel last transaction
+
+```bash
+curl --location --request POST 'http://localhost:13083/api/terminal/pay' \
+--data-raw '{
+    "externalId": "52f3af60-50ai-42a6-a333-er57278477rk",
+    "requestContents": {
+        "operation": "CC",
+        "transactionId": "52f3af60-50ai-42a6-a333-er57278477rk",
+        "hostTransId" : "hostTransId of previous transaction"
+    },
+    "printCustomerReceipt": true,
+    "printMerchantReceipt": false
+}'
+```
+
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -64,6 +80,7 @@ Name | Type | Description | Notes
 **operation** | **String** | Operation identifier. CP for payment, CC for cancel, CR for refund | [optional] 
 **amount** | **String** | Amount, as a string, with a . as a decimal separator | [optional] 
 **transactionId** | **String** | ID of the transaction, for the terminal | [optional] 
+**hostTransId** | **String** | ID of previous transaction, for the terminal | [only for CC] 
 
 ### Example Response Body
 
