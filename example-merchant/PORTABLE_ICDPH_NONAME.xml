@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eu:IdentityData xmlns:eu="http://financnasprava.sk/ekasa/udaje/schema/v2">
+	<eu:Dic>1234567890</eu:Dic>
+	<eu:Ico>99999999</eu:Ico>
+	<eu:IcDph>SK9999999999</eu:IcDph>
+	<eu:CorporateBodyFullName>O.C.a.F.A. PORTABLE_ICDPH_NONAME</eu:CorporateBodyFullName>
+	<eu:OrganizationUnit>
+		<eu:CashRegisterCode>88812345678900001</eu:CashRegisterCode>
+		<eu:CashRegisterType>PORTABLE</eu:CashRegisterType>
+	</eu:OrganizationUnit>
+	<eu:PhysicalAddress>
+		<eu:Country>Slovenská republika</eu:Country>
+		<eu:Municipality>Bratislava</eu:Municipality>
+		<eu:StreetName>Miletičova</eu:StreetName>
+		<eu:BuildingNumber>4</eu:BuildingNumber>
+		<eu:PropertyRegistrationNumber>22</eu:PropertyRegistrationNumber>
+		<eu:DeliveryAddress>
+			<eu:PostalCode>99999</eu:PostalCode>
+		</eu:DeliveryAddress>
+	</eu:PhysicalAddress>
+</eu:IdentityData>
