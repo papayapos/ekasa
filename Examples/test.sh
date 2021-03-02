@@ -82,3 +82,7 @@ http -f GET ${host}:13083/api/cash < priklad_vyber.json
 http -f GET ${host}:13083/api/document/update < priklad_fix_document.json
 ###
 
+#PLATBA
+http -f GET ${host}:13083/api/terminal/register < priklad_pay_register.json
+http -f GET ${host}:13083/api/terminal/pay < priklad_pay_payment.json
+
