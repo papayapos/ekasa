@@ -32,6 +32,8 @@ http -f GET ${host}:13083/api/location/update < priklad_location_physical.json
 
 http -f GET ${host}:13083/api/location/update < priklad_location_other.json
 
+http -f GET ${host}:13083/api/location/update < priklad_location_fix.json
+
 #PRENOSNA PLATCA
 http -f GET ${host}:13083/api/merchant/store < priklad_merchant_prenosna_platca.json
 

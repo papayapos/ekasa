@@ -1,0 +1,13 @@
+{
+    "fixLocation":{
+        "useLastMerchant":true,
+        "physicalAddress":{
+            "buildingNumber":"g",
+            "country":"SK",
+            "municipality":"fg",
+            "postalCode":"55555",
+            "propertyRegistrationNumber":"9",
+            "street":"g"
+        }
+    }
+}
