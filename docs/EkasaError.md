@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 These codes are from Finance API and are handled inside this library. If any of this messages appear it is considered as malfuncion of library or hardware component and Papaya support should be called.
 
 CODE | Error Message | Comment
+------------ | ------------- | -------------
 1 | "Poškodené dáta v CHDÚ" |
 -2 | "Zlé vstupné hodnoty." |
 -8 | "Táto verzia integračného rozhrania už nie je naďalej podporovaná." |
