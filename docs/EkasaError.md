@@ -13,13 +13,13 @@ Name | Type | Description | Notes
 
 Response error codes are grouped into 4 categories (COMMON, RESOLVABLE, SEVERE and EKASA).
 
-COMMON - represent basic response that has denial response and something needs to be corrected in request to get things work.
+COMMON - Represent basic denial response. Something needs to be corrected in request to get things work.
 
-RESOLVABLE - represents error that create or describe an problem that needs to be solved with other request (ex. fixDocument) or warns about something that should be resolved soon (ex. expiring certificate)
+RESOLVABLE - Represents error that create or describe an problem that needs to be solved with other request (ex. fixDocument) or warns about something that should be resolved soon (ex. expiring certificate)
 
-SEVERE - represents errors that need to be solved by technical team and technical support should be called. (ex. hardware related or bugs that break the whole funcionality of the device)
+SEVERE - Represents errors that need to be solved by technical team and technical support should be called. (ex. hardware related or bugs that break the whole funcionality of the device)
 
-EKASA - represent errors that were responded from Minister of Finance eKasa servers. These errors should not appear in reponse. Technical consultation or support is needed if they do.
+EKASA - Represent errors that were responded from Minister of Finance eKasa servers. These errors should not appear in reponse. Technical consultation or support is needed if they do.
 
 #### Common
 
