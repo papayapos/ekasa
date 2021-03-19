@@ -25,37 +25,72 @@ EKASA - Represent errors that were responded from Minister of Finance eKasa serv
 
 CODE | Message | Detail | Type
 ------------ | ------------- | ------------- | -------------
-100 | "" |  | 
-100 | "" |  | 
-100 | "" |  | 
-100 | "" |  | 
-100 | "" |  | 
-100 | "" |  | 
-100 | "" |  | 
-100 | "" |  | 
-100 | "" |  | 
-100 | "" |  | 
-100 | "" |  | 
-100 | "" |  | 
-100 | "" |  | 
+101 | "Nie sú nahraté údaje obchodníka" |  | 
+102 | "Papaya eKasa licencia nie je platná" |  | 
+103 | "Papaya Pay licencia nie je platná" |  | 
+104 | "Žiadna požiadavka" |  | 
+105 | "Služba nedostupná" |  | 
+106 | "Blíži sa koniec platnosti certifikátu" |  | 
+110 | "Zlý formát XML údajov" |  | 
+111 | "DIČ nahrávaných údajov sa nezhoduje s DIČ údajov v úložisku" |  | 
+112 | "Nedovolená hodnota v IÚ obchodníka" |  | 
+113 | "DIČ IÚ údajov sa nezhoduje s AU údajmi obchodníka" |  | 
+114 | "Neplatné AÚ obchodníka" |  | 
+115 | "Zlé heslo certifikátu" |  | 
+116 | "Nebolo zadané povinné pole integrátora" |  | 
+120 | "ID kupujúceho a Typ ID kupujúceho musia byť vyplnené obe, alebo ani jedno" |  | 
+121 | "Typ dokladu: Pokladničný doklad a Neplatný doklad musí obsahovať položky" |  | 
+122 | "Faktúra musí mať číslo faktúry (1-50 znakov)" |  | 
+123 | "Typ položky: Kladná nesmie mať zápornú cenu" |  | 
+124 | "Typ položky: Vrátené obaly, Vrátená, Zľava, Odpočítaná záloha, Výmena poukazu - nesmie mať kladnú cenu" |  | 
+125 | "Vrátená alebo opravná položka musí mať referenčné číslo dokladu (1-44 znakov)" |  | 
+126 | "Číslo poukazu musí byť 1-50 znakov" |  | 
+127 | "Poukaz musí mať množstvo 1" |  | 
+128 | "Množstvo položky musí byť od 1 do 10 000 000" |  | 
+129 | "Meno položky musí byť 1-48 znakov" |  | 
+130 | "Suma účtu sa nerovná súčtu položiek" |  | 
+131 | "Suma účtu nesmie byť 0" |  | 
+132 | "Viacero poukazov s rovnakým čislom" |  | 
+133 | "Viacero položiek sa odkazuje na ten istý poukaz" |  | 
+134 | "Poukaz môže byť aplikovaný iba na kladnú položku" |  | 
+135 | "Poukaz nie je použitý žiadnou položkou" |  | 
+136 | "Položka sa odkazuje na neexistujúci poukaz" |  | 
+137 | "ID predávajúceho a Typ ID predávajúceho musia byť vyplnené obe, alebo ani jedno" |  | 
+138 | "Cena musí byť v rozsahu od -10 000 000 do 10 000 000" |  | 
+140 | "Žiadne opravné dáta" |  | 
+141 | "Posledný doklad nepotrebuje opravu" |  | 
+142 | "Opravné dáta obsahujú viac položiek ako pôvodný doklad" |  | 
+150 | "Žiadne údaje o polohe" | | 
+151 | "PSČ musí obsahovať 5 čísel" | | 
+152 | "Príliš dlhá adresa (obec a ulica 1-100 znakov, orientačné č. 1-20, súpisné č. 1-10, iné 1-255)" | | 
+153 | "Neplatné GPS súradnice" | | 
+154 | "Fyzická adresa musí obsahovať názov obce a ulice" | | 
+160 | "Množstvo vkladu/výberu nesmie byť 0" | | 
+170 | "Chýbajúce povinné registračné údaje" | | 
+171 | "Platba s rovnakým ID už bola spracovaná" | | 
+172 | "Terminál je zaneprázdnený" | | 
 
 #### Resolvable
 
 CODE | Message | Detail | Type
 ------------ | ------------- | ------------- | -------------
-200 | "" |  | 
-200 | "" |  | 
-200 | "" |  | 
-200 | "" |  | 
-200 | "" |  | 
-200 | "" |  | 
-200 | "" |  | 
-200 | "" |  | 
-200 | "" |  | 
-200 | "" |  | 
-200 | "" |  | 
-200 | "" |  | 
-200 | "" |  | 
+2 | "" |  | 
+2 | "" |  | 
+2 | "" |  | 
+2 | "" |  | 
+2 | "" |  | 
+2 | "" |  | 
+2 | "" |  | 
+2 | "" |  | 
+2 | "" |  | 
+2 | "" |  | 
+2 | "" |  | 
+2 | "" |  | 
+2 | "" |  | 
+2 | "" |  | 
+2 | "" |  | 
+2 | "" |  | 
+
 
 #### Severe
 
