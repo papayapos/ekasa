@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 Code | Message | Detail | Type
 ------------ | ------------- | ------------- | -------------
 100 | "Úspešná odpoveď" |  | SUCCESS
-1XX | | | Common[COMMON](EkasaError.md#)
-2XX | | | Resolvable[RESOLVABLE](EkasaError.md#)
-3XX | | | Severe[SEVERE](EkasaError.md#)
--X | | | Ekasa[EKASA](EkasaError.md#)
+1XX | | | [Common](EkasaError.md#Common)
+2XX | | | [Resolvable](EkasaError.md#Resolvable)
+3XX | | | [Severe](EkasaError.md#Severe)
+-X | | | [Ekasa](EkasaError.md#Ekasa)
