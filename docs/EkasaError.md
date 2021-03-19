@@ -4,13 +4,68 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**errorType** | **String** |  | [optional] 
 **errorCode** | **Integer** |  | [optional] 
 **message** | **String** |  | [optional] 
 **detail** | **String** |  | [optional] 
 
 
-### EKASA ERROR CODES
+### Error codes
+
+Response error codes are grouped into 4 categories (COMMON, RESOLVABLE, SEVERE and EKASA).
+
+COMMON - represent basic response that has denial response and something needs to be corrected in request to get things work.
+
+RESOLVABLE - represents error that create or describe an problem that needs to be solved with other request (ex. fixDocument) or warns about something that should be resolved soon (ex. expiring certificate)
+
+SEVERE - represents errors that need to be solved by technical team and technical support should be called. (ex. hardware related or bugs that break the whole funcionality of the device)
+
+EKASA - represent errors that were responded from Minister of Finance eKasa servers. These errors should not appear in reponse. Technical consultation or support is needed if they do.
+
+#### Common
+
+CODE | Message | Detail | Type
+------------ | ------------- | ------------- | -------------
+100 | "" |  | 
+100 | "" |  | 
+100 | "" |  | 
+100 | "" |  | 
+100 | "" |  | 
+100 | "" |  | 
+100 | "" |  | 
+100 | "" |  | 
+100 | "" |  | 
+100 | "" |  | 
+100 | "" |  | 
+100 | "" |  | 
+100 | "" |  | 
+
+#### Resolvable
+
+CODE | Message | Detail | Type
+------------ | ------------- | ------------- | -------------
+200 | "" |  | 
+200 | "" |  | 
+200 | "" |  | 
+200 | "" |  | 
+200 | "" |  | 
+200 | "" |  | 
+200 | "" |  | 
+200 | "" |  | 
+200 | "" |  | 
+200 | "" |  | 
+200 | "" |  | 
+200 | "" |  | 
+200 | "" |  | 
+
+#### Severe
+
+If this messages appear it is considered as malfuncion of library or hardware component and Papaya support should be called.
+
+CODE | Message | Detail | Type
+------------ | ------------- | ------------- | -------------
+300 | "" |  |
+
+#### Ekasa
 
 These codes are from Finance API and are handled inside this library. If any of this messages appear it is considered as malfuncion of library or hardware component and Papaya support should be called.
 
