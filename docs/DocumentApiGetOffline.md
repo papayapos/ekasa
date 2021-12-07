@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**Fix Document**](DocumentApiFix.md#FixDocument) | **POST** /api/document/update | Update broken document
 
 
-## GetOffline
+## GetDocument
 
 Get all offline documents
 
