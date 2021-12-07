@@ -1,0 +1,22 @@
+{
+   "merchantName":"TEST",
+   "ico":"99999999",
+   "dic":"1234567890",
+   "merchantAddress":{
+      "country":"Slovenská republika",
+      "city":"Bratislava",
+      "street":"Miletičova",
+      "number":"4",
+      "postalCode":"99999"
+   },
+   "venueName":"prevadzka",
+   "venueAddress":{
+      "country":"Slovenská republika",
+      "city":"Bratislava",
+      "street":"Miletičova",
+      "number":"4",
+      "postalCode":"99999"
+   },
+   "terminalId":"99887766",
+   "integrator":"miso-test"
+}

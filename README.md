@@ -1,5 +1,5 @@
 # Papaya Ekasa API
-This repository explains how Papaya eKasa API should be used to create receipt, update location etc. on certified eKasa solution on PAX android devices. It also provides services for communication with payment solution Pos Terminal from Mechantpas.
+This repository explains how Papaya eKasa API should be used to create receipt, update location etc. on certified eKasa solution on PAX android devices. It also provides services for communication with payment Terminal application.
 
 ## To start with eKasa or Terminal API
 To start with terminal API it is required for merchant to have activated Payment terminal with activated Payment Application.

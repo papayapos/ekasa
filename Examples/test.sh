@@ -32,6 +32,8 @@ http -f GET ${host}:13083/api/location/update < priklad_location_physical.json
 
 http -f GET ${host}:13083/api/location/update < priklad_location_other.json
 
+http -f GET ${host}:13083/api/location/update < priklad_location_fix.json
+
 #PRENOSNA PLATCA
 http -f GET ${host}:13083/api/merchant/store < priklad_merchant_prenosna_platca.json
 
@@ -81,4 +83,8 @@ http -f GET ${host}:13083/api/cash < priklad_vyber.json
 #OPRAVA DOKLADU
 http -f GET ${host}:13083/api/document/update < priklad_fix_document.json
 ###
+
+#PLATBA
+http -f GET ${host}:13083/api/terminal/register < priklad_pay_register.json
+http -f GET ${host}:13083/api/terminal/pay < priklad_pay_payment.json
 

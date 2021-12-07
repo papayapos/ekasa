@@ -1,0 +1,10 @@
+{
+  "externalId": "5577040b-9137-441b-9003-ff6207e2642f",
+  "requestContents": {
+    "operation": "CP",
+    "amount": "1.5",
+    "transactionId": "5577040b-9137-441b-9003-ff6207e2642f"
+  },
+  "printCustomerReceipt": true,
+  "printMerchantReceipt": true
+}

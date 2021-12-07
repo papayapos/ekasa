@@ -17,7 +17,8 @@ Setup custom settings for eKasa Pay
 ```bash
 curl --location --request POST 'http://localhost:13083/api/setup' \
 --data-raw '{
-    "hideFrontActivity" : true
+    "hideFrontActivity" : false,
+    "isKioskMode": true
 }'
 ```
 
@@ -30,7 +31,8 @@ curl --location --request POST 'http://localhost:13083/api/setup' \
 
 ```yaml
 {
-    "hideFrontActivity" : true
+    "hideFrontActivity" : false,
+    "isKioskMode": true
 }
 ```
 
@@ -39,12 +41,14 @@ curl --location --request POST 'http://localhost:13083/api/setup' \
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **hideFrontActivity** | **Boolean** | Switch hide/show eKasa Pay front activity | [optional]
+**isKioskMode** | **Boolean** | Switch kiosk mode (completely blocked UI) | [optional]
 
 ### Example Response Body
 
 ```yaml
 {
-  "hideFrontActivity" : true
+  "hideFrontActivity" : true,
+  "isKioskMode": true
 }
 ```
 
@@ -53,6 +57,7 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **hideFrontActivity** | **Boolean** | Switch hide/show eKasa Pay front activity | [required]
+**isKioskMode** | **Boolean** | Switch kiosk mode (completely blocked UI) | [optional]
 **warning** | **String** | Filled only if any warning | [optional] 
 **errorMessage** | **String** |  | [optional] 
 
