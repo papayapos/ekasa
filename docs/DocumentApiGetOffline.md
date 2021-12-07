@@ -43,7 +43,7 @@ Name | Type | Description | Notes
 
 ```yaml
 {
-    [
+    "documents": [
         {
             "amount": 3.0,
             "cashRegisterCode": "88812345678900001",
@@ -132,6 +132,8 @@ Name | Type | Description | Notes
             ]
         }
     ],
+    "locations" : [],
+
     "status": {
         "code": 100
     }
@@ -141,5 +143,6 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **warning** | **String** | Filled only if any warning | [optional]
-**document** | [**[Document]**](Document.md) | field of documents that are NOT sent to FP | [optional] 
+**locations** | [**[Location]**](Location.md) | array of locations that are NOT sent to FP | [optional] 
+**documents** | [**[Document]**](Document.md) | field of documents that are NOT sent to FP | [optional] 
 **errorMessage** | **String** |  | [optional] 
