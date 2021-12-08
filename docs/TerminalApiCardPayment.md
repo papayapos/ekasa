@@ -89,7 +89,7 @@ Name | Type | Description | Notes
 {
   "content" {
       "customerReceipt": "Customer receipt (formatted text)",
-      "merchantReceipt": "Merchant receipt (formatted text)"
+      "merchantReceipt": "Merchant receipt (formatted text)",
       "result": "0",
       "respMessage" : "Ok",
 
@@ -97,19 +97,18 @@ Name | Type | Description | Notes
       "transactionId": "28f3af59-52af-42a6-a217-fc26278482db",
 
 
-      "aid" : "",
-      "authCode": "581281",
-      "cardBrand": "Visa Prepaid",
+      "aid" : "A0000000000000",
+      "authCode": "DE900000",
+      "cardBrand": "Visa Debit",
       "hostTransId" : "",
-      "currencyCode" : "",
-      "hostTransId" : "",
-      "maskedPan" : "",
-      "sequenceNumber" : "",
+      "currencyCode" : "978",
+      "maskedPan" : "222222******3825",
+      "sequenceNumber" : "001010000",
       "bin": "479608",
       "hostRc": "proident qui",
       "pinIndicator": "N",
       "signature": "N",
-      "transactionTime" : ""
+      "transactionTime" : "20191218101551"
       
   },
   "status": {
@@ -142,3 +141,4 @@ Name | Type | Description | Notes
 **signature** | **String** | Information , whether Signature checking is required (Values: Y/N) | [optional] 
 **customerReceipt** | **String** | Customer receipt (formatted text) | [optional] 
 **merchantReceipt** | **String** | Merchant receipt (formatted text) | [optional] 
+**transactionTime** | **String** | Time the transaction was closed, in format yyyymmddHHMMSS | example "20191218101551"
