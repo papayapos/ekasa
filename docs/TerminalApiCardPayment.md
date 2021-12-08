@@ -91,24 +91,24 @@ Name | Type | Description | Notes
       "customerReceipt": "Customer receipt (formatted text)",
       "merchantReceipt": "Merchant receipt (formatted text)",
       "result": "0",
-      "respMessage" : "Ok",
+      "respMessage": "Ok",
 
-      "terminalId" : "TEST",
+      "terminalId": "TEST",
       "transactionId": "28f3af59-52af-42a6-a217-fc26278482db",
 
 
-      "aid" : "A0000000000000",
+      "aid": "A0000000000000",
       "authCode": "DE900000",
       "cardBrand": "Visa Debit",
-      "hostTransId" : "",
-      "currencyCode" : "978",
-      "maskedPan" : "222222******3825",
-      "sequenceNumber" : "001010000",
+      "hostTransId": "",
+      "currencyCode": "978",
+      "maskedPan": "222222******3825",
+      "sequenceNumber": "001010000",
       "bin": "479608",
       "hostRc": "proident qui",
       "pinIndicator": "N",
       "signature": "N",
-      "transactionTime" : "20191218101551"
+      "transactionTime": "20191218101551"
       
   },
   "status": {
