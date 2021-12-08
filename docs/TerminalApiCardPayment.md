@@ -79,28 +79,44 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **operation** | **String** | Operation identifier. CP for payment, CC for cancel, CR for refund | [optional] 
 **amount** | **String** | Amount, as a string, with a . as a decimal separator | [optional] 
-**transactionId** | **String** | ID of the transaction, for the terminal | [optional] 
+**transactionId** | **String(40)** | ID of the transaction, for the terminal | [optional] 
 **hostTransId** | **String** | ID of previous transaction, for the terminal | [only for CC] 
+**invNumber** | **String** |  | [optional]
 
 ### Example Response Body
 
 ```yaml
 {
-  "warning": "Warning, you should solve this, but eKasa works",
-  "success": true,
-  "message": {
-    "result": "0",
-    "respMessage": "Ok",
-    "authCode": "581281",
-    "cardBrand": "Visa Prepaid",
-    "bin": "479608",
-    "hostRc": "proident qui",
-    "pinIndicator": "N",
-    "signature": "N",
-    "customerReceipt": "Customer receipt (formatted text)",
-    "merchantReceipt": "Merchant receipt (formatted text)"
+  "content" {
+      "customerReceipt": "Customer receipt (formatted text)",
+      "merchantReceipt": "Merchant receipt (formatted text)"
+      "result": "0",
+      "respMessage" : "Ok",
+
+      "terminalId" : "TEST",
+      "transactionId": "28f3af59-52af-42a6-a217-fc26278482db",
+
+
+      "aid" : "",
+      "authCode": "581281",
+      "cardBrand": "Visa Prepaid",
+      "hostTransId" : "",
+      "currencyCode" : "",
+      "hostTransId" : "",
+      "maskedPan" : "",
+      "sequenceNumber" : "",
+      "bin": "479608",
+      "hostRc": "proident qui",
+      "pinIndicator": "N",
+      "signature": "N",
+      "transactionTime" : ""
+      
   },
-  "errorMessage": "Only if error occured"
+  "status": {
+    "code": 100
+  },
+  "success": true,
+
 }
 ```
 
@@ -108,16 +124,15 @@ Name | Type | Description | Notes
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**warning** | **String** | Filled only if any warning | [optional] 
 **success** | **Boolean** | shows if the payment process succeeded | [optional] 
-**message** | [**PaxPaymentResponse**](TerminalCardPaymentApi.md#PaxPaymentResponse) |  | [optional] 
-**errorMessage** | **String** |  | [optional] 
+**content** | [**PaxPaymentResponse**](TerminalCardPaymentApi.md#PaxPaymentResponse) | includes all available data about payment | [optional] 
+**status** | [**EkasaStatus**](EkasaStatus.md) |  | [optional] 
 
 #### PaxPaymentResponse
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**result** | **String** | Operation result | [optional] 
+**result** | **String** | Operation result: 0 - success, 1 - canceled by user, 2 to 9 - transaction failed (for reason look for respMessage)  | [optional] 
 **respMessage** | **String** | Additional text information of Transaction result. It could be sent by host ,or locally by Payment application. | [optional] 
 **authCode** | **String** | Autorisation Code | [optional] 
 **cardBrand** | **String** | Card Brand (VISA , MasterCard ...) | [optional] 
