@@ -81,6 +81,7 @@ curl --location --request POST 'http://localhost:13083/api/document/store' \
 
 ### Example with Rounding
 
+```json
 {
 	"header" : "Dobry den",
 	"footer" : "Tips not included",
@@ -107,6 +108,7 @@ curl --location --request POST 'http://localhost:13083/api/document/store' \
 	},
 	"verifyPrint" : true
 }
+```
 
 ### Request Parameters
 
