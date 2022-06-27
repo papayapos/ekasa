@@ -79,7 +79,7 @@ curl --location --request POST 'http://localhost:13083/api/document/store' \
 }
 ```
 
-### Example with Rounding
+### Example with Rounding (from version 1.2.2.2)
 
 ```json
 {
