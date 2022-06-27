@@ -79,6 +79,35 @@ curl --location --request POST 'http://localhost:13083/api/document/store' \
 }
 ```
 
+### Example with Rounding
+
+{
+	"header" : "Dobry den",
+	"footer" : "Tips not included",
+
+	"type" : "PD",
+	"amount" : 9.98,
+
+	"documentEntries" : [
+		{"price" : 4.98, "quantity" : 1, "name" : "Tovar A", "vatRate" : "VAT_20", "itemType" : "SALE"},
+		{"price" : 2.5, "quantity" : 2, "name" : "Tovar B", "vatRate" : "VAT_10", "itemType" : "SALE"}
+	],
+
+	"payments" : {
+		"gastro listok" : 4.99,
+		"hotovost" : 4.99
+	},
+
+	"paymentRounding" : "hotovost",
+
+	"printer" : {
+		"socket" : "tcp://192.168.88.87:9100",
+ 		"numberOfCharInRow" : 48,
+		"codingNumber" : 30
+	},
+	"verifyPrint" : true
+}
+
 ### Request Parameters
 
 Name | Type | Description | Notes
@@ -91,6 +120,7 @@ Name | Type | Description | Notes
 **paragonDate** | **DateTime** | If this is parameter is filled, evidence of paragon is going to be sent to eKasa and printed | [optional] 
 **documentEntries** | [**Array&lt;DocumentReceiptItem&gt;**](DocumentApiStore.md#DocumentReceiptItem) | Items sold on receipt. | [optional] 
 **payments** | **Hash&lt;String, Float&gt;** | Payment types and sums used for receipt payment. This parameter sum is NOT! checked against receipt sum. | [optional] 
+**paymentRounding** | **String** | Value of rounded payment. String must be equal to payment key (String) that was used in property "payments". Example "hotovost" or "cash" | [optional] 
 **header** | **String** | Custom header to print at the top of the receipt | [optional] 
 **footer** | **String** | Custom footer to print at the bottom of the receipt | [optional] 
 **printer** | [**Printer**](Printer.md) |  | 
