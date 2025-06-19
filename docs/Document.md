@@ -45,7 +45,7 @@ Name | Type | Description | Notes
 **totalPrice** | **Float** | Calculated total price of item with quantity | [optional] 
 **vatRate** | **String** | Vat rate | [optional] 
 **seller** | [**Seller**](Document.md#Seller) |  | [optional] 
-**specialRegulation** | **String** | Special regulation on item if any | [optional] 
+**specialRegulation** | [**SpecialRegulation**](Document.md#SpecialRegulation) | Special regulation on item. Allowed values PDP, OOD, CK, PT, UD, ZPS | [optional] 
 **voucherNumber** | **String** | Number of voucher | [optional] 
 **voucherRef** | **String** | Applied voucher reference | [optional] 
 
@@ -55,6 +55,17 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | Seller id | 
 **sellerIdType** | **String** | Seller id type | 
+
+#### SpecialRegulation
+
+Value | Description
+------|------------
+**PDP**| transfer of tax liability (prenesenie daňovej povinnosti)
+**OOD**| tax free (oslobodené od dane)
+**CK**| travel agencies (úprava zdaňovania prirážky - cestovné kancelárie)
+**PT**| used goods (úprava zdaňovania prirážky - použitý tovar)
+**UD**| works of art (úprava zdaňovania prirážky - umelecké diela)
+**ZPS**| collectibles and antiques (úprava zdaňovania prirážky - zberateľské predmety a starožitnosti)
 
 #### VatRateSum
 
